@@ -1,7 +1,7 @@
 import java.util.Iterator;
 
 
-public class SuperArrayIterator{
+public class SuperArrayIterator implements Iterator<String>{
     private SuperArray a;
     private int index;
     
@@ -24,7 +24,7 @@ public class SuperArrayIterator{
     }
 
     public void remove(){
-	
+	throw new UnsupportedOperationException();
     }
     
     
