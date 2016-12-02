@@ -27,5 +27,4 @@ public class SuperArrayIterator implements Iterator<String>{
 	throw new UnsupportedOperationException();
     }
     
-    
 }
