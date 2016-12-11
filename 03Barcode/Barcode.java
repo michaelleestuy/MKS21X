@@ -29,7 +29,6 @@ public class Barcode implements Comparable<Barcode>{
 	a += "|";
 	for(int i = 0; i < 5; i++){
 	    int b = Integer.parseInt("" + zip.charAt(i));
-	    System.out.println(b);
 	    a += values[b];
 	}
 
@@ -85,19 +84,21 @@ public class Barcode implements Comparable<Barcode>{
     */
 
     public String toString(){
-	return _zip;
+	return _zip + " " + toCode(_zip.substring(0, 5));
     }
 
     public static void main(String[]args){
-	/*
+	
 	Barcode a = new Barcode("41824");
 	System.out.println(a);
 	Barcode b = new Barcode("18249");
 	System.out.println(b);
+	/*
 	System.out.println(a.compareTo(b));
 	System.out.println(b.compareTo(a));
 	*/
-	System.out.println(toCode("47162"));
+	//System.out.println(toCode("47162"));
+	
     }
 
     
