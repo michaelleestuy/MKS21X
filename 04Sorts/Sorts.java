@@ -37,12 +37,12 @@ public class Sorts{
     }
     
     public static void main(String[]args){
-	int[]a = {11, 41, 124, 42, 44, 44, 11, -10};
+	int[]a = {14125, 185, 8917578, 7959, 815158};
 	print(a);
 	selectionSort(a);
 	System.out.println();
 	print(a);
-
+	System.out.println();
 
     }
 
