@@ -17,10 +17,10 @@ public class Sorts{
      *@param data  the elements to be sorted.
      */
     public static void selectionSort(int[]data){
-	for(int college = 0; college < data.length() - 1; college++){
+	for(int college = 0; college < data.length - 1; college++){
 	    int small = data[college];
 	    int ofSmall = college;
-	    for(int board = college; board < data.length(); board++){
+	    for(int board = college; board < data.length; board++){
 		if(data[board] < small){
 		    small = data[board];
 		    ofSmall = board;
@@ -29,5 +29,22 @@ public class Sorts{
 	    swap(data, college, ofSmall);
 	}
     }
+
+    public static void print(int[]a){
+	for(int i = 0; i < a.length; i++){
+	    System.out.print(a[i] + " ");
+	}
+    }
     
+    public static void main(String[]args){
+	int[]a = {11, 41, 124, 42, 44, 44, 11, -10};
+	print(a);
+	selectionSort(a);
+	System.out.println();
+	print(a);
+
+
+    }
+
+
 }
