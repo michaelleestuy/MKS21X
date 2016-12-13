@@ -17,8 +17,17 @@ public class Sorts{
      *@param data  the elements to be sorted.
      */
     public static void selectionSort(int[]data){
-	
-	
+	for(int college = 0; college < data.length() - 1; college++){
+	    int small = data[college];
+	    int ofSmall = college;
+	    for(int board = college; board < data.length(); board++){
+		if(data[board] < small){
+		    small = data[board];
+		    ofSmall = board;
+		}
+	    }
+	    swap(data, college, ofSmall);
+	}
     }
     
 }
