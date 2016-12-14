@@ -30,6 +30,34 @@ public class Sorts{
 	}
     }
 
+    public static void shift(int[]data, int a, int b){
+	int c = data[b];
+	for(int i = b; i > a; i--){
+	    data[i] = data[i - 1];
+	}
+	data[a] = c;
+    }
+
+    /**Insertion sort of an int array.
+     *Upon completion, the elements of the array will be in increasing order.
+     *@param data  the elements to be sorted.
+     */
+    public static void insertionSort(int[]data){
+	for(int college = 1; college < data.length; college++){
+	    for(int board = college - 1; board >= 0; board--){
+		if(data[college] > data[board]){
+		    shift(data, board + 1, college);
+		    board = -1;
+		}
+		if(board == 0 && data[college] <= data[board]){
+		    shift(data, board, college);
+		    board = -1;
+		}
+	    }
+	    
+	}
+    }
+    
     public static void print(int[]a){
 	for(int i = 0; i < a.length; i++){
 	    System.out.print(a[i] + " ");
@@ -37,13 +65,9 @@ public class Sorts{
     }
     
     public static void main(String[]args){
-	int[]a = {14125, 185, 8917578, 7959, 815158};
+	int[]a = {1, 84, 182, 91, 40, 11, 401};
+	insertionSort(a);
 	print(a);
-	selectionSort(a);
-	System.out.println();
-	print(a);
-	System.out.println();
-
     }
 
 
