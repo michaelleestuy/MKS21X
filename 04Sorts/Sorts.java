@@ -57,6 +57,25 @@ public class Sorts{
 	    
 	}
     }
+
+    /**Bubble sort of an int array.
+     *Upon completion, the elements of the array will be in increasing order.
+     *@param data  the elements to be sorted.
+     */
+    public static void bubbleSort(int[]data){
+	for(int college = 0; college < data.length; college++){
+	    boolean clean = true;
+	    for(int board = 0; board < data.length - college - 1; board++){
+		if(data[board] > data[board + 1]){
+		    swap(data, board, board + 1);
+		    clean = false;
+		}
+	    }
+	    if(clean){
+		college = data.length;
+	    }
+	}
+    }
     
     public static void print(int[]a){
 	for(int i = 0; i < a.length; i++){
@@ -65,10 +84,8 @@ public class Sorts{
     }
     
     public static void main(String[]args){
-	int[]a = {1, 84, 182, 91, 40, 11, 401};
-	insertionSort(a);
+	int[]a = { 0 ,1, 3,4,4,5,6,7,8,9,14,144};
+	bubbleSort(a);
 	print(a);
     }
-
-
 }
